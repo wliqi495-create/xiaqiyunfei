@@ -16,7 +16,7 @@
 
 {"name": "👖JackTV直播{翻}","url":"https://php.946985.filegear-sg.me/jackTV.m3u","type": 10,"remark":"✈️TG频道@stymei1"},
 
-{"name": "👖hk","url":"https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆","type": 10,"remark":"✈️TG频道@stymei1"},
+{"name": "👖港台直播","url":"https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆","type": 10,"remark":"✈️TG频道@stymei1"},
 
 {"name": "👖四季TV直播{台湾ip翻}","url":"http://ezc.xtvantsc.xyz/litv.php","type": 10,"remark":"✈️TG频道@stymei1"}],
 
@@ -389,3 +389,4 @@
     {
 
 "name": "👖两个BT","api": "https://cdn.jsdelivr.net/gh/yswag/uzVideo@main/js/spider/bttwo.js","instance":"bttwo20240628","webSite": "https://www.bttwoo.com","remark":"✈️TG频道@stymei1"}]}
+
