@@ -16,6 +16,8 @@
 
 {"name": "👖JackTV直播{翻}","url":"https://php.946985.filegear-sg.me/jackTV.m3u","type": 10,"remark":"✈️TG频道@stymei1"},
 
+{"name": "👖hk","url":"https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆","type": 10,"remark":"✈️TG频道@stymei1"},
+
 {"name": "👖四季TV直播{台湾ip翻}","url":"http://ezc.xtvantsc.xyz/litv.php","type": 10,"remark":"✈️TG频道@stymei1"}],
 
 "vod":[
@@ -162,7 +164,7 @@
           {"name": "🔞最色","remark":"抖音@是小延啊","url": "https://api.zuiseapi.com/api.php/provide/vod/?ac=list"},
           {"name": "🔞豆豆","remark":"抖音@是小延啊","url": "https://doudouzy.com/api.php/provide/vod/?ac=list"},
           {"name": "🔞色猫","remark":"抖音@是小延啊","url": "http://caiji.semaozy.net/inc/apijson_vod.php"},
-          {"name": "🔞百万","remark":"抖音@是小延啊","url": "https://api.bwzyz.com/api.php/provide/vod/at/json"}
+          {"name": "🔞百万","remark":"抖音@是小延啊","url": "https://api.bwzyz.com/api.php/provide/vod/at/json"},
 {
 "name": "👖瓜子影视App","remark":"✈️TG频道@stymei1","webSite": "http://api.gudvxty.com","codeID": "ra5Z3wtXKshzSMK2","instance": "gzapp20241001","api": "https://cdn.jsdelivr.net/gh/YYDS678/uzVideo-extensions@main/vod/js/Zhi_gzapp.txt"
 },
@@ -385,4 +387,5 @@
       "type": 101
     },
     {
+
 "name": "👖两个BT","api": "https://cdn.jsdelivr.net/gh/yswag/uzVideo@main/js/spider/bttwo.js","instance":"bttwo20240628","webSite": "https://www.bttwoo.com","remark":"✈️TG频道@stymei1"}]}
