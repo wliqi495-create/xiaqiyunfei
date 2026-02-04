@@ -102,7 +102,7 @@
           {"name": "👖艾旦影视","remark":"✈️TG频道@stymei1","url": "https://lovedan.net/api.php/provide/vod"},
           {"name": "👖蛋蛋魔法","remark":"✈️TG频道@stymei1","url": "https://ddmf.net/api.php/provide/vod"},
           {"name": "👖OK","remark":"✈️TG频道@stymei1","url": "https://api.okzyw.net/api.php/provide/vod/?ac=list"},
-          {"name": "👖索尼","remark":"✈️TG频道@stymei1","url": "https://suoniapi.com/api.php/provide/vod/?ac=list"},
+          {"name": "👖无水","remark":"✈️TG频道@stymei1","url": "https://api.wsyzy.net/api.php/provide/vod/"},
           {"name": "👖索尼","remark":"✈️TG频道@stymei1","url": "https://suoniapi.com/api.php/provide/vod/?ac=list"},
           {"name": "👖瀑布盘","remark":"✈️TG频道@stymei1","url": "https://dh.ha.cn/api.php/provide/vod/at/xml/"},
           {"name": "🔞大秀Live直播","remark":"抖音@是小延啊","url": "https://learnpython.ggff.net/cam4"},
@@ -389,4 +389,5 @@
     {
 
 "name": "👖两个BT","api": "https://cdn.jsdelivr.net/gh/yswag/uzVideo@main/js/spider/bttwo.js","instance":"bttwo20240628","webSite": "https://www.bttwoo.com","remark":"✈️TG频道@stymei1"}]}
+
 
