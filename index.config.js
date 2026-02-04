@@ -72,7 +72,7 @@ var index_config_default = {
     ],
     autoPush: true
   },
-  t4: {list: [
+   t4: {list: [
     {name: "独播库",
       address: "http://zhangqun1818.serv00.net:6628/?spider=独播库"},
     {name: "电视丨直播",
@@ -145,14 +145,14 @@ var index_config_default = {
       address: "http://zhangqun1818.serv00.net:5052/?sp=推特"},
     {name: "九区丨爬虫",
       address: "http://zhangqun1818.serv00.net:5052/?sp=九个区"},
-    {name: "人剧丨爬虫",
-      address: "http://sspa8.top:99/api.php?id=rr&uid=suisui"},
+    {name: "凡客丨爬虫",
+      address: "http://zhangqun1818.serv00.net:6628/?spider=凡客tv"},
     {name: "UAA丨爬虫",
       address: "http://zhangqun1818.serv00.net:5052/?sp=uaa有声"},
     {name: "爆料丨糖心",
       address: "https://caicai.us.kg/糖心次元.php"},
-    {name: "免等丨云盘",
-      address: "http://sspa8.top:99/api.php?id=yt&uid=suisui"},
+    {name: "麻雀丨爬虫",
+      address: "http://zhangqun1818.serv00.net:5052/?sp=麻雀视频"},
     {name: "EPO丨爬虫",
       address: "http://zhangqun1818.serv00.net:5052/?sp=epo"}
 ]},
