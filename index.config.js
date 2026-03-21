@@ -171,6 +171,8 @@ var index_config_default = {
       address: "http://zhangqun1818.serv00.net:5052/?sp=奇优动漫"},
     {name: "📺小鸭子",
       address: "http://zhangqun1818.serv00.net:5052/?sp=小鸭子看看"},
+     {name: "📺iptv",
+      address: "https://t4.jsnzkpg.uk"},
       {name: "📺枫叶",
       address: "https://catbox.n13.club/ai/枫叶音乐.php"},
     {name: "📺影探",
