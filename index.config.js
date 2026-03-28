@@ -439,13 +439,7 @@ address: "https://www.mandao.cc/api.php/provide/vod/"}
       enabled: true,
       logoUrl: ""
     },
-    {
-      name: "港澳台直播",
-      url: "https://live.catvod.com/live.php?token=3a0925cf5be46126c3b92048b467451244d2799fc97ed6b46a7a0169dc2a8164",
-      ua: "okhttp/3.15",
-      enabled: true,
-      logoUrl: ""
-    },
+    
  {
       name: "iptv1",
       url: "https://cdn.jsdelivr.net/gh/Kimentanm/aptv/m3u/iptv.m3u",
