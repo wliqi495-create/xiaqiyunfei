@@ -1,0 +1,256 @@
+[
+  {
+    "name": "📙猫眼看书",
+    "type": 10,
+    "api": "http://api.lemiyigou.com",
+    "key": "api.lemiyigou.com",
+    "header": {
+      "client-device": "2d37f6b5b6b2605373092c3dc65a3b39",
+      "client-brand": "Redmi",
+      "client-version": "2.3.0",
+      "client-name": "app.maoyankanshu.novel",
+      "client-source": "android",
+      "Authorization": "bearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGkuanhndHp4Yy5jb21cL2F1dGhcL3RoaXJkIiwiaWF0IjoxNjgzODkxNjUyLCJleHAiOjE3NzcyMDM2NTIsIm5iZiI6MTY4Mzg5MTY1MiwianRpIjoiR2JxWmI4bGZkbTVLYzBIViIsInN1YiI6Njg3ODYyLCJwcnYiOiJhMWNiMDM3MTgwMjk2YzZhMTkzOGVmMzBiNDM3OTQ2NzJkZDAxNmM1In0.mMxaC2SVyZKyjC6rdUqFVv5d9w_X36o0AdKD7szvE_Q",
+      "Referer": "http://api.lemiyigou.com"
+    },
+    "categories": [
+      { "url": "/module/rank?type=1&channel=1&page={{page}}", "name": "必读榜" },
+      { "url": "/module/rank?type=5&channel=1&page={{page}}", "name": "潜力榜" },
+      { "url": "/module/rank?type=2&channel=1&page={{page}}", "name": "完本榜" },
+      { "url": "/module/rank?type=3&channel=1&page={{page}}", "name": "更新榜" },
+      { "url": "/module/rank?type=4&channel=1&page={{page}}", "name": "搜索榜" },
+      { "url": "/module/rank?type=6&channel=1&page={{page}}", "name": "评论榜" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=lejRej", "name": "玄幻" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=nel5aK", "name": "武侠" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=mbk5ez", "name": "都市" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=vbmOeY", "name": "仙侠" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=penRe7", "name": "军事" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=xbojag", "name": "历史" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=mep2bM", "name": "游戏" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=zbq2dp", "name": "科幻" },
+      { "url": "/novel?sort=1&page={{page}}&categoryId=YerEdO", "name": "轻小说" }
+    ],
+    "detail": {
+      "tocUrl": "/novel/{{$..novelId}}/chapters?readNum=1",
+      "intro": "$..summary",
+      "category": "{{$.data.categoryNames[*].className}},{{$.data.tagNames[*].tagName}}",
+      "coverUrl": "$..cover",
+      "tips": "$..lastChapter.chapterName"
+    },
+    "content": {
+      "content": "$.content##一秒记住.*供精彩阅读。|7017k"
+    },
+    "list": {
+      "list": "$.data[*]",
+      "name": "$.novelName",
+      "author": "$.authorName",
+      "detailUrl": "/novel/{{$.novelId}}?isSearch=1",
+      "intro": "$.summary",
+      "coverUrl": "$.cover"
+    },
+    "search": {
+      "list": "$.data[*]",
+      "name": "$.novelName",
+      "author": "$.authorName",
+      "detailUrl": "/novel/{{$.novelId}}?isSearch=1",
+      "intro": "$.summary",
+      "last": "",
+      "coverUrl": "$.cover",
+      "url": "search?page=1&keyword={{key}}"
+    },
+    "toc": {
+      "list": "$.data.list[*]",
+      "name": "$.chapterName",
+      "url": "$.path@js:decodeAES(result,'f041c49714d39908','0123456789abcdef')"
+    },
+    "searchable": true,
+    "discoverable": true
+  },
+  {
+    "name": "📙免费读",
+    "type": 10,
+    "api": "https://www.mianfeidu.com",
+    "categories": [
+      { "url": "/all/id/43.html?page={{page}}", "name": "📙小说" },
+      { "url": "/all/id/47.html?page={{page}}", "name": "历史演义" },
+      { "url": "/all/id/48.html?page={{page}}", "name": "神魔幻想" },
+      { "url": "/all/id/49.html?page={{page}}", "name": "侠义公案" },
+      { "url": "/all/id/50.html?page={{page}}", "name": "才子佳人" },
+      { "url": "/all/id/51.html?page={{page}}", "name": "世情小说" },
+      { "url": "/all/id/52.html?page={{page}}", "name": "文言笔记" },
+      { "url": "/all/id/92.html?page={{page}}", "name": "英雄传奇" },
+      { "url": "/all/id/94.html?page={{page}}", "name": "讽刺小说" },
+      { "url": "/all/id/66.html?page={{page}}", "name": "📙典籍" },
+      { "url": "/all/id/68.html?page={{page}}", "name": "儒家经典" },
+      { "url": "/all/id/69.html?page={{page}}", "name": "道家经典" },
+      { "url": "/all/id/70.html?page={{page}}", "name": "佛教经典" },
+      { "url": "/all/id/107.html?page={{page}}", "name": "易学典籍" },
+      { "url": "/all/id/65.html?page={{page}}", "name": "📙史传" },
+      { "url": "/all/id/71.html?page={{page}}", "name": "二十四史" },
+      { "url": "/all/id/72.html?page={{page}}", "name": "野史笔记" },
+      { "url": "/all/id/108.html?page={{page}}", "name": "传记方志" },
+      { "url": "/all/id/113.html?page={{page}}", "name": "编年纪传" },
+      { "url": "/all/id/67.html?page={{page}}", "name": "📙百家" },
+      { "url": "/all/id/87.html?page={{page}}", "name": "文化艺术" },
+      { "url": "/all/id/88.html?page={{page}}", "name": "医学方技" },
+      { "url": "/all/id/89.html?page={{page}}", "name": "天文算经" },
+      { "url": "/all/id/91.html?page={{page}}", "name": "诸子百家" },
+      { "url": "/all/id/96.html?page={{page}}", "name": "阴阳术数" },
+      { "url": "/all/id/97.html?page={{page}}", "name": "农工百技" },
+      { "url": "/all/id/64.html?page={{page}}", "name": "📙诗文" },
+      { "url": "/all/id/81.html?page={{page}}", "name": "诗词歌赋" },
+      { "url": "/all/id/82.html?page={{page}}", "name": "词文别集" },
+      { "url": "/all/id/101.html?page={{page}}", "name": "诗话词话" },
+      { "url": "/all/id/111.html?page={{page}}", "name": "文论文平" }
+    ],
+    "detail": {
+      "intro": ".brief_text.0@text",
+      "category": "head meta[property='og:novel:category']@content",
+      "tips": "head meta[property='og:novel:status']@content"
+    },
+    "content": {
+      "content": ".read-content p!0@text"
+    },
+    "list": {
+      "list": ".listboxw dl",
+      "name": "a.1@text",
+      "author": "a.2@text",
+      "detailUrl": "a.0@href",
+      "coverUrl": "https://www.mianfeidu.com{{img.0@data-original}}"
+    },
+    "search": {
+      "list": ".secd-rank-list",
+      "name": "a.1@text",
+      "author": "a.2@text",
+      "detailUrl": "a.0@href",
+      "coverUrl": "https://www.mianfeidu.com{{img.0@data-original}}",
+      "url": "/search.html?keyword={{key}}"
+    },
+    "toc": {
+      "list": ".cate-list a",
+      "name": ".chapter_name@text",
+      "url": "href"
+    },
+    "searchable": true,
+    "discoverable": true
+  },
+  {
+    "name": "📙乐阅读",
+    "type": 10,
+    "api": "https://www.22is.com",
+    "categories": [
+      { "name": "玄幻小说", "url": "/sort/1/{{page}}.html" },
+      { "name": "都市小说", "url": "/sort/2/{{page}}.html" },
+      { "name": "历史小说", "url": "/sort/3/{{page}}.html" },
+      { "name": "科幻小说", "url": "/sort/4/{{page}}.html" },
+      { "name": "悬疑小说", "url": "/sort/5/{{page}}.html" },
+      { "name": "网游小说", "url": "/sort/6/{{page}}.html" },
+      { "name": "穿越小说", "url": "/sort/7/{{page}}.html" },
+      { "name": "现代言情", "url": "/sort/15/{{page}}.html" },
+      { "name": "古代言情", "url": "/sort/16/{{page}}.html" },
+      { "name": "豪门总裁", "url": "/sort/17/{{page}}.html" },
+      { "name": "青春校园", "url": "/sort/18/{{page}}.html" },
+      { "name": "其他类别", "url": "/sort/8/{{page}}.html" },
+      { "name": "总排行榜", "url": "/rank/allvisit/" },
+      { "name": "月排行榜", "url": "/rank/monthvisit/" },
+      { "name": "周排行榜", "url": "/rank/weekvisit/" },
+      { "name": "收藏榜单", "url": "/rank/goodnum/" }
+    ],
+    "detail": {
+      "tocUrl": "text.完整目录@href",
+      "intro": "head > meta[property=\"og:description\"]@content",
+      "category": "head > meta[name=\"og:novel:category\"]@content",
+      "tips": "head > meta[name=\"og:novel:latest_chapter_name\"]@content"
+    },
+    "content": {
+      "content": ".txtnav p@text##网站地址统一.*阅读记录可.*抱歉....|使用默认浏览.*添加到主屏幕哦~"
+    },
+    "search": {
+      "list": ".newbox@li||id.article_list_content@li",
+      "name": "h3@text",
+      "author": ".labelbox label.0@text",
+      "detailUrl": "a.0@href",
+      "coverUrl": "img@src",
+      "url": "/search/",
+      "method": "POST",
+      "post": "searchkey={{key}}&searchtype=all"
+    },
+    "toc": {
+      "list": "#chapterList a",
+      "name": "text",
+      "url": "href"
+    }
+  },
+  {
+    "name": "📙顶点小说",
+    "type": 10,
+    "api": "http://m.23uswx.org",
+    "categories": [
+      { "url": "/xclass/0/{{page}}.html", "name": "全部" },
+      { "url": "/xclass/1/{{page}}.html", "name": "玄幻" },
+      { "url": "/xclass/2/{{page}}.html", "name": "修真" },
+      { "url": "/xclass/3/{{page}}.html", "name": "都市" },
+      { "url": "/xclass/4/{{page}}.html", "name": "穿越" },
+      { "url": "/xclass/5/{{page}}.html", "name": "网游" },
+      { "url": "/xclass/6/{{page}}.html", "name": "科幻" }
+    ],
+    "detail": {
+      "intro": ".review.0@text",
+      "tips": "head meta[property='og:novel:latest_chapter_name']@content",
+      "category": "head meta[property='og:novel:category']@content",
+      "tocUrl": ".recommend h2:last-child a.0@href"
+    },
+    "content": {
+      "content": "#chaptercontent@html##最新网址：m\\.23uswx\\.org|『加入书签，方便阅读』",
+      "nextUrl": "下一页@href"
+    },
+    "search": {
+      "list": ".hot_sale",
+      "name": ".title.0@text",
+      "author": ".author.0@text##作者：",
+      "detailUrl": "a.0@href",
+      "coverUrl": "img.0@data-original",
+      "url": "/s.php",
+      "method": "POST",
+      "post": "keyword={{key}}&t=1"
+    },
+    "toc": {
+      "list": "#chapterlist a!0",
+      "name": "text",
+      "url": "href"
+    },
+    "searchable": true,
+    "discoverable": true
+  },
+  {
+    "name": "国学",
+    "type": 10,
+    "api": "http://www.gudianmingzhu.com",
+    "categories": [
+      { "name": "首页", "url": "/guji/index_{{page}}.html", "url2": "/guji/" },
+      { "name": "经部", "url": "/guji/index_{{page}}.html", "url2": "/jingbu/" },
+      { "name": "史部", "url": "/guji/index_{{page}}.html", "url2": "/shibu/" },
+      { "name": "子部", "url": "/guji/index_{{page}}.html", "url2": "/zibu/" },
+      { "name": "集部", "url": "/guji/index_{{page}}.html", "url2": "/jibu/" }
+    ],
+    "detail": {
+      "intro": ".xxtt.0@text"
+    },
+    "content": {
+      "content": ".xxtt@html"
+    },
+    "list": {
+      "list": ".dgcon,.divcon,.xxk,.kxx",
+      "name": "h2.0@text",
+      "detailUrl": "a.0@href",
+      "coverUrl": "img.0@src"
+    },
+    "toc": {
+      "list": ".dnrk a,.dcon a",
+      "name": "text",
+      "url": "href"
+    },
+    "searchable": false,
+    "discoverable": true
+  }
+]
