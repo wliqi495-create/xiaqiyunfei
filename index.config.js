@@ -318,6 +318,20 @@ address: "https://www.mandao.cc/api.php/provide/vod/"}
       logoUrl: ""
     },
     {
+      name: "网络直播1",
+      url: "https://m.iill.top/Live.m3u",
+      ua: "okhttp/3.15",
+      enabled: true,
+      logoUrl: ""
+    },
+    {
+      name: "Govin",
+      url: "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      ua: "okhttp/3.15",
+      enabled: true,
+      logoUrl: ""
+    }
+    {
       name: "JP直播",
       url: "https://web.utako.moe/jp.m3u",
       ua: "okhttp/3.15",
