@@ -251,8 +251,6 @@ var index_config_default = {
  cms: {list: [
 {name: "📺猫眼",
 address: "https://api.maoyanapi.top/api.php/provide/vod"},
-{name: "📺魅蓝",
-address: "https://tv1.aagay.com/api.php/provide/vod/"},
 {name: "📺无水",
 address: "https://api.wsyzy.net/api.php/provide/vod/"},
 {name: "📺旺剧",
