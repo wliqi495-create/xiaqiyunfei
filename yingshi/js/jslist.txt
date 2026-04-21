@@ -24,7 +24,3 @@ apple.js
 毒舌影视.js
 人人影视.js
 热播影视.js
-auto.js
-喜马拉雅.js
-瓜子.js
-全球更新.js
