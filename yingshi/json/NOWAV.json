@@ -1,0 +1,18 @@
+{
+    "站名": "女优",
+    "主页url": "https://nowav.tv/",
+    "直接播放": "1",
+    "图片代理": "2",
+    "数组": "<div class=\"td-module-thumb\">&&</div>",
+    "图片": "data-bg=\"url('&&')\"",
+    "标题": "title=\"&&\"",
+    "链接": "href=\"&&\"",
+    "播放数组": "<div class=\"td-module-meta-info\">&&</div>",
+    "播放列表": "<a&&/a>",
+    "播放标题": ">&&<",
+    "播放链接": "href=\"&&\"",
+    "分类": "女优$tag#无码$vb2a1#媒体库$va1",
+    "分类url": "https://nowav.tv/tag/{cateId}/page/{catePg}",
+    "免嗅": "0"
+    
+}

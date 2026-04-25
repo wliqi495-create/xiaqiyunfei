@@ -1,0 +1,16 @@
+{
+  "请求头": "User-Agent$MOBILE_UA",
+  "主页url": "https://www.kissavtv.com",
+  "数组": "bind_video_img\">&&</h",
+  "图片": "data-src=\"&&\"",
+  "标题": "title\"><a*>&&</a",
+  "副标题": "label\">&&<",
+  "简介": "header-left\">&&<php",
+  "链接": "href=\"&&\"",
+  "搜索模式": "1",
+  "搜索url": "https://www.kissavtv.com/search/page/{pg}/wd/{wd}.html",
+  "分类数组": "class=\"horizontal-img-box&&</a",
+  "分类标题": "alt=\"&&\"",
+  "分类ID": "/index/getStyleMvs/id/&&\"",
+  "分类url": "https://www.kissavtv.com/index/getstylemvs/id/{cateId}/sort/update/page/{catePg};;z"
+}

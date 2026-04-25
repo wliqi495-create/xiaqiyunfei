@@ -1,0 +1,19 @@
+{
+  "key": "就爱看AV",
+  "name": "就爱看AV",
+  "type": 3,
+  "api": "csp_XBPQ",
+  "searchable": 1,
+  "quickSearch": 1,
+  "filterable": 1,
+  "ext": {
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8",
+    "主页url": "http://aican.shop/index.php/vodtype/lunli.html",
+    "简介": "description\" content=\"&&\"",
+    "分类url": "http://aican.shop/index.php/vodshow/{cateId}--------{catePg}---.html",
+    "分类数组": "<a&&/a>",
+    "分类标题": ">&&<",
+    "分类ID": "/index.php/vodshow/&&-----------.html"
+  }
+}

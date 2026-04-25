@@ -1,0 +1,16 @@
+{
+  "主页url": "https://crvcd61.mom/",
+  "数组": "<a&&</a",
+  "直接播放": "1",
+  "图片": "data-original=\"&&\"",
+  "标题": "title=\"&&\"",
+  "副标题": "<em>&&</em>",
+  "链接": "href=\"&&\"",
+  "简介": "description\" content=\"&&\"",
+  "搜索模式": "1",
+  "搜索url": "https://crvcd61.mom/vod/search/page/{pg}/wd/{wd}/",
+  "分类url": "https://crvcd61.mom/vodtype/{cateId}-{catePg}",
+  "分类数组": "<a&&</a>",
+  "分类标题": ">&&</a>",
+  "分类": "精品推荐$1#日韩精品$2#国产视频$20#激情动漫$4#欧美视频$25"
+}

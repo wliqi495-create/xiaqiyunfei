@@ -1,0 +1,22 @@
+{
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8",
+    "主页url": "https://epy.sxbd2.yachts/cn/home/web/",
+    "数组": "默认--cat\"&&thumb||首页--最新发布&&thumb",
+    "标题": "默认--title=\"&&\"||首页--title=\"&&\"",
+    "图片": "默认--data-original=\"&&\"||首页--data-src=\"&&\"",
+    "链接": "默认--href=\"&&\"||首页--href=\"&&\"",
+    "简介": "description\" content=\"&&\"",
+    "搜索模式": "1",
+    "搜索url": "https://epy.sxbd2.yachts/s/{wd}/page/{pg}.html",
+    "搜索数组": "image-container&&</header>",
+    "搜索标题": "title=\"&&\"",
+    "搜索图片": "data-src=\"&&\"",
+    "搜索链接": "href=\"&&\"",
+    "分类url": "https://epy.sxbd2.yachts/vodtype/{cateId}-{catePg}.html;;z",
+    "分类二次截取": "hulian\">&&</div>",
+    "分类数组": "<a&&/a>",
+    "分类标题": ">&&<",
+    "分类ID": "/vodtype/&&.html",
+    "分类": "国产视频$20#日韩有码$21#日韩无码$22#制服学生$23#动漫卡通$24#欧美变态$25#三级伦理$26#"
+}

@@ -1,0 +1,15 @@
+{
+    "站名": "17AV",
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8",
+    "主页url": "https://www.17av.me/",
+    "导航": "https://d.fldh.me/",
+    "数组": "lazy loaded&&class=\"pcimg",
+    "标题": "title=\"&&\"",
+    "图片": "src=\"&&\"",
+    "链接": "href=\"&&\"",
+    "分类url": "https://www.17av.me/vodtype/{cateId}-{catePg}.html;;z",
+ "分类数组": "<li class=\"menu_items\">&&</li>",
+       "分类标题": ">&&</a>",
+       "分类ID": "/vodtype/&&.html"
+}

@@ -1,0 +1,21 @@
+{
+    "作者": "",
+    "站名": "937",
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8",
+    "首页": "120",
+    "起始页": "1",
+    "数组": "public-list-div public-list-bj\">&&</div",
+    "标题": "👠+title=\"&&\"",
+    "图片": "data-src=\"&&\"",
+    "链接": "href=\"&&\"",
+    "导演": "导演：&&<span",
+    "主演": "主演：&&</div",
+    "简介": "描述:</strong>&&</p",
+    "线路数组": "class=\"swiper-slide&&</a>[排序:极速无广>*]",
+    "线路标题": "&nbsp;&&<",
+    "主页url": "https://937tv.vip/",
+    "搜索url": "https://937tv.vip/vodsearch/{wd}----------{pg}---.html",
+    "分类url": "https://937tv.vip/vodshow/{cateId}-{area}--{class}-{lang}-{letter}---{catePg}---{year}.html",
+    "分类": "电影$dianying#电视剧$dianshiju#综艺$zongyi#动漫$dongman#短剧$duanju#"
+}
