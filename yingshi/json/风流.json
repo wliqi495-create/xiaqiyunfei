@@ -1,0 +1,17 @@
+{
+    "请求头": "User-Agent$MOBILE_UA",
+    "主页url": "https://djtzph.flsp8.cyou/cn/",
+    "数组": "container&&</li>",
+    "标题": "title=\"&&\"",
+    "图片": "src=\"&&\"",
+    "副标题": "icoplay\">&&</",
+    "链接": "href=\"&&\"",
+    "跳转播放链接": "vod_play_url = '&&'",
+    "简介": "description\" content=\"&&\"",
+    "搜索url": "https://djtzph.flsp8.cyou/s/{wd}/page/{pg}.html",
+    "分类url": "https://djtzph.flsp8.cyou/vodtype/{cateId}-{catePg}.html;;z",
+    "分类二次截取": "<ul>&&ul>",
+    "分类数组": "<a&&a>",
+    "分类标题": ">&&<",
+    "分类ID": "/vodtype/&&.html"
+}

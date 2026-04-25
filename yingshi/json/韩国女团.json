@@ -1,0 +1,8 @@
+{
+  "name": "Gather.韩国女团",
+  "type": 0,
+  "url": "https://gist.githubusercontent.com/yuanwangokk-1/a661dd0e88466aa22f2a7c1fb375635e/raw/8708d9947be1c64c52bb1610a30aaa1b595848c9/韩国女团直播.m3u",
+  "ua": "okhttp/3.15",
+  "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+  "logo": "https://epg.112114.xyz/logo/{name}.png"
+}

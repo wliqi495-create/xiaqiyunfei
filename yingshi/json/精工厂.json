@@ -1,0 +1,14 @@
+{
+  "主页url": "https://l7xv.xnavxx.xyz/",
+  "数组": "class=\"thumb-unit video-img-box&&</a",
+  "图片": "src=\"&&\"",
+  "标题": "alt=\"&&\"",
+  "副标题": "title=\"&&\"",
+  "链接": "href=\"&&\"",
+  "简介": "description\" content=\"&&\"",
+  "搜索url": "https://wfdgh23iu.diyise38.buzz/index.php/vod/search/page/{pg}/wd/{wd}.html",
+  "跳转播放链接": "data-preview=\"&&\"",
+  "分类url": "https://l7xv.xnavxx.xyz/?fenlei=%{cateId}&p={catePg};;z",
+  "分类": "国产自拍$国产自拍#欧美极品$欧美极品#日韩无码$日韩无码#AV明星$AV明星#中文字幕$中文字幕#动漫精品$动漫精品#极骚萝莉$极骚萝莉#人妖视频$人妖视频#重咸口味$重咸口味#三级自慰$三级自慰#强奸乱伦$强奸乱伦#擂台格斗$擂台格斗#辣椒GIGA$辣椒GIGA#HEYZO$HEYZO#独家DMM$独家DMM#HEY诱惑$HEY诱惑#童颜巨乳$童颜巨乳#高潮喷吹$高潮喷吹#激情口交$激情口交#绝美少女$绝美少女#首次亮相$首次亮相#",
+  "分类值": "*"
+}

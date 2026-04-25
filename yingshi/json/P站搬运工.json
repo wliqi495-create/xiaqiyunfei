@@ -1,0 +1,21 @@
+{
+  "作者": "Aricx",
+  "站名": "P站搬运工",
+  "请求头": "User-Agent$MOBILE_UA",
+  "编码": "UTF-8",
+  "防丢url": "https://momnostop.buzz/video/",
+  "主页url": "https://y41r1rr3.mmbytody.buzz/vod/",
+  "分类url": "/vodtype/{cateId}-{catePg}/",
+  "分类二次截取": "class=\"menu&&class=\"wrap",
+  "分类数组": "<dd&&/dd>",
+  "分类标题": ">&&</a",
+  "分类ID": "/vodtype/&&/",
+  "二次截取": "<div class=\"mod index-list\">&&style=\"margin",
+  "数组": "class=\"preview-item&&</dd>",
+  "标题": "<h3>&&</h3>",
+  "图片": "data-original=\"&&\"",
+  "副标题": "🔞瑟瑟才是源动力",
+  "链接": "href=\"&&/\"[替换:voddetail>>vodplay]+-1-1/",
+  "直接播放": "1",
+  "搜索url": "/vodsearch/{wd}----------{pg}---/"
+}

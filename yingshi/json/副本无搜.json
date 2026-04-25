@@ -1,0 +1,21 @@
+{
+  "作者": "",
+  "站名": "无名",
+  "请求头": "User-Agent$MOBILE_UA",
+  "编码": "UTF-8",
+  "防丢url": "",
+  "主页url": "https://34maogx.com/",
+  "分类url": "https://34maogx.com/vodtypehtml/{cateId}_{catePg}.html[https://34maogx.com/vodtypehtml/{cateId}.html]",
+  "分类二次截取": "本站推荐&&图片系列",
+  "分类数组": "<li&&/li>",
+  "分类标题": ">&&</a",
+  "分类ID": "/vodtypehtml/&&.html",
+  "数组": "class=\"content-item&&</li>",
+  "标题": "title=\"&&\"",
+  "图片": "data-original=\"&&\"",
+  "副标题": "🔞瑟瑟才是源动力🔞",
+  "链接": "href=\"&&\"",
+  "直接播放": "1",
+  "跳转播放链接": "var player_*\"url\":\"&&\"",
+  "搜索url": "/search/page/{pg}/wd/{wd}.html"
+}

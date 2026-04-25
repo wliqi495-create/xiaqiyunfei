@@ -1,0 +1,20 @@
+{
+  "站名": "盲盒仓库",
+  "防丢url①": "https://mitt40.mitao885.cc/123/",
+  "防丢url②": "https://mitt40.mitao886.cc/123/",
+  "主页url": "https://20251207aa-bnm.hhcangku.top/index.php/label/index.html",
+  "分类url": "https://20251207aa-bnm.hhcangku.top/index.php/vod/type/id/{cateId}/page/{catePg}.html",
+  "分类二次截取": "class=\"row-item-content\"&&</ul>",
+  "分类数组": "<li&&</li>",
+  "分类标题": ">&&</a>",
+  "分类ID": "/index.php/vod/type/id/&&.html",
+  "二次截取": "class=\"content-list\"&&class=\"clear",
+  "数组": "class=\"video-pic loading\"&&</a></h5></div></li>",
+  "标题": "title=\"&&\"",
+  "副标题": ">&&</span>",
+  "图片": "data-src=\"&&\"",
+  "链接": "https://20251207aa-bnm.hhcangku.top+href=\"&&\"",
+  "跳转播放链接": "var player_*\"url\":\"&&\"",
+  "搜索模式": "1",
+  "搜索url": "https://20251207aa-bnm.hhcangku.top/index.php/vod/search/page/{pg}/wd/{wd}.html"
+}

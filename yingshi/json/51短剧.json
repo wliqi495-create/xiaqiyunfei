@@ -1,0 +1,20 @@
+{
+    "作者": "Aries",
+    "站名": "51吃瓜短剧",
+    "编码": "UTF-8",
+    "请求头": "User-Agent$MOBILE_UA",
+    "主页url": "https://51cg1.com/category/cbdj/",
+    "首页": "200",
+    "起始页": "0",
+    "分类url": "https://51cg1.com/category/{cateId}/{catePg}/[https://51cg1.com/category/{cateId}/];;mrcRAz",
+    "分类": "✨短剧✨$cbdj#",
+    "数组": "url *\"&&</a[不包含:旗士]",
+    "图片": "https://v2.api-m.com/api/meinvpic?return=302",
+    "标题": "《&&》",
+    "副标题": "<span itemprop=\"datePublished*>&&<",
+    "链接": "<a href=\"&&\"",
+    "简介": "👉+/blockquote><p>&&</p><p><div class=\"dplayer",
+    "跳转播放链接": "video\":{\"url\":\"&&\"",
+    "搜索url": "https://51cg1.com/category/id/{pg}/?wd={wd}",
+    "搜索模式": "1"
+}

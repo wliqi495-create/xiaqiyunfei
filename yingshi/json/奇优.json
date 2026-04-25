@@ -1,0 +1,13 @@
+{
+                "请求头": "User-Agent$MOBILE_UA",
+                "防走丢": "http://www.qiyoudy1.com/",
+                "播放数组": "stui-content__playlist clearfix&&</ul>",
+                "播放列表": "<a&&a>",
+                "播放链接": "href=\"&&\"",
+                "播放标题": "title=\"&&\"",
+                "线路数组": "<li id=\"tab&&</li>",
+                "线路标题": ">&&</a >",
+                "分类url": "http://www.taoju3.com/list/{cateId}_{catePg}.html?order={by}",
+                "分类": "电影$1#电视剧$2#动漫$3#综艺$4#伦理$6",
+                "排序": "按时间$time#按人气$hit"
+            }

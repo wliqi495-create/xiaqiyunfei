@@ -1,0 +1,15 @@
+{
+    "主页url": "https://wfdgh23iu.diyise38.buzz/",
+    "数组": "class=\"thumbnail&&</a",
+    "图片": "img src=\"&&\"",
+    "标题": "alt=\"&&\"",
+    "副标题": "<p>&&</p>",
+    "链接": "href=\"&&\"",
+    "简介": "description\" content=\"&&\"",
+    "搜索url": "https://wfdgh23iu.diyise38.buzz/index.php/vod/search/page/{pg}/wd/{wd}.html",
+    "分类url": "https://wfdgh23iu.diyise38.buzz/index.php/vod/type/id/{cateId}/page/{catePg}.html;;z",
+    "分类二次截取": "class=\"first&&</dl",
+    "分类数组": "<dd&&</dd>",
+    "分类标题": ">&&</a",
+    "分类ID": "href=\"/index.php/vod/type/id/&&.html\""
+}

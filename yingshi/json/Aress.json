@@ -1,0 +1,18 @@
+{
+  "作者": "Aries",
+  "站名": "",
+  "请求头": "User-Agent$MOBILE_UA",
+  "编码": "UTF-8",
+  "图片代理": "0",
+  "主页url": "https://av01.club/zh/",
+  "首页": "120",
+  "起始页": "1",
+  "分类url": "https://av01.club/zh/{cateId}?page={catePg};;z",
+  "分类": "有码$censored#无码$uncensored#欧美$western#FC2$fc2#动漫$hanime#国产$chinese",
+  "二次截取": "",
+  "数组": "class=\"card-img-top embed-responsive-item lazyload\"&&div class=\"video-list-item-tag-wrapper\"",
+  "标题": "title=\"&&\"",
+  "图片": "data-src=\"&&\"",
+  "副标题": "title=\"&&\"",
+  "链接": "href=\"&&\""
+}

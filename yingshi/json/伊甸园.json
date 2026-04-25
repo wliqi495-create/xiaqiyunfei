@@ -1,0 +1,18 @@
+{
+  "作者": "Aricx",
+  "站名": "https://she.llydy27.xyz/rk.php",
+  "请求头": "User-Agent$MOBILE_UA",
+  "编码": "UTF-8",
+  "主页url": "https://she.llydy27.xyz/rk.php",
+  "分类url": "https://she.llydy27.xyz/rk.php/vod/type/id/{cateId}/page/{catePg}.html",
+  "分类二次截取": "class=\"selected&&class=\"secondary",
+  "分类数组": "<li&&/li>",
+  "分类标题": ">&&</a",
+  "分类ID": "/rk.php/vod/type/id/&&.html",
+  "数组": "class=\"item&&</a>",
+  "标题": "title\">&&</strong>",
+  "图片": "data-src=\"&&\"",
+  "副标题": "🔞+色色才是源动力+🔞",
+  "链接": "href=\"&&\"",
+  "直接播放": "1"
+}
