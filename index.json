@@ -1,0 +1,334 @@
+{
+  "spider": "./Spiders-Lib/GM.jar;md5;a36831ed798998bbf38bb5862c32f96d",
+  "sites": [
+    {
+      "key": "Jable",
+      "name": "Jable",
+      "type": 3,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.48
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/jable.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "*.ico*",
+            "*.png*",
+            "*.css*",
+            "https://*.adsco.re/*",
+            "https://*.googleapis.com/*",
+            "https://*.googlesyndication.com/*",
+            "https://*.googletagmanager.com/*",
+            "https://*.hpyjmp.com/*",
+            "https://*.magsrv.com/*",
+            "https://*.mnaspm.com/*",
+            "https://*.shukriya90.com/*",
+            "https://*.tapioni.com/*",
+            "https://*.tsyndicate.com/*",
+            "https://assets.jable.tv/assets/js/player.js"
+          ]
+        },
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://jable.tv/"
+          },
+          "categoryContent": {
+            "loadUrl": "https://jable.tv/${tid:-latest-updates}/?from=${pg:-1}${sort_by:-}"
+          },
+          "detailContent": {
+            "loadUrl": "https://jable.tv/videos/${id}/"
+          },
+          "searchContent": {
+            "loadUrl": "https://jable.tv/search/${key}/?from=${pg:-1}"
+          }
+        }
+      }
+    },
+    {
+      "key": "netflav",
+      "name": "NETFLAV",
+      "type": 3,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.48
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/netflav.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "*.png",
+            "*.css",
+            "*.woff2",
+            "https://*.googletagmanager.com/*",
+            "https://*.imkirh.com/*",
+            "https://*.xlvirdr.com/*"
+          ]
+        },
+        "playUrlMatch": [
+          "https://*/*/master.m3u8*",
+          "https://*/*/v.mp4",
+          "https://*/*/playlist.m3u8*"
+        ],
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://netflav.com/trending"
+          },
+          "categoryContent": {
+            "loadUrl": "https://netflav.com/${tid}&page=${pg:-1}${range:-}"
+          },
+          "detailContent": {
+            "loadUrl": "https://netflav.com/video?id=${id}/"
+          },
+          "playerContent": {
+            "loadUrl": "https://netflav.com/video?id=${vod_id}#${src}"
+          },
+          "searchContent": {
+            "loadUrl": "https://netflav.com/search?keyword=${key}&page=${pg:-1}&type=title"
+          }
+        }
+      }
+    },
+    {
+      "key": "123av",
+      "name": "123AV",
+      "type": 3,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.49
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/123av.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "*.ico",
+            "*.png",
+            "*.jpg",
+            "*.vtt",
+            "*.css*",
+            "https://*.googleapis.com/*",
+            "https://*.googletagmanager.com/*",
+            "https://*.recombee.com/*",
+            "https://*.google-analytics.com/*",
+            "https://njav.tv/recomm/items/*"
+          ]
+        },
+        "playUrlMatch": [
+          "https://*/v.m3u8"
+        ],
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://123av.com/zh/dm9"
+          },
+          "categoryContent": {
+            "loadUrl": "https://123av.com/zh/${tid}?page=${pg:-1}${filter:-}${sort:-}"
+          },
+          "detailContent": {
+            "loadUrl": "https://123av.com/zh/${id}"
+          },
+          "playerContent": {
+            "loadUrl": "https://123av.com/zh/${vod_id}"
+          },
+          "searchContent": {
+            "loadUrl": "https://123av.com/zh/search?keyword=${key}&page=${pg:-1}"
+          }
+        }
+      }
+    },
+    {
+      "key": "MissAV",
+      "name": "MissAV",
+      "type": 3,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.49
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/missav.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "*.ico",
+            "*.png",
+            "*.css",
+            "*.svg",
+            "https://*.cloudflareinsights.com/*",
+            "https://*.googletagmanager.com/*",
+            "https://*.ktkjmp.com/*",
+            "https://*.magsrv.com/*",
+            "https://*.mnaspm.com/*",
+            "https://*.myavlive.com/*",
+            "https://*.recombee.com/*",
+            "https://*.rmhfrtnd.com/*",
+            "https://*.trackwilltrk.com/*",
+            "https://*.tsyndicate.com/*",
+            "https://missav.com/fonts/*",
+            "https://tsyndicate.com/*",
+            "https://hartattenuate.com/*"
+          ]
+        },
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://missav.ws/cn/"
+          },
+          "categoryContent": {
+            "loadUrl": "https://missav.ws/cn/${tid}?page=${pg:-1}${filter:-}${sort:-}"
+          },
+          "detailContent": {
+            "loadUrl": "https://missav.ws/cn/${id}"
+          },
+          "searchContent": {
+            "loadUrl": "https://missav.ws/cn/search/${key}?page=${pg:-1}"
+          }
+        }
+      }
+    },
+    {
+      "key": "supjav",
+      "name": "SupJav",
+      "type": 3,
+      "quickSearch": 0,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.48
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/supjav.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "https://*.adforcast.com/*",
+            "https://*.adxadserv.com/*",
+            "https://*.bbrdbr.com/*",
+            "https://*.fanza.cc/*",
+            "https://*.google-analytics.com/*",
+            "https://*.googletagmanager.com/*",
+            "https://*.mnaspm.com/*",
+            "https://*.recombee.com/*",
+            "https://*.sacdnssedge.com/*",
+            "https://*.tapioni.com/*",
+            "https://*.yandex.ru/*",
+            "https://*/prebid.min.js",
+            "https://divisiondrearilyunfiled.com/*",
+            "https://endowmentoverhangutmost.com/*",
+            "https://imasdk.googleapis.com/*",
+            "https://psoroumukr.com/*",
+            "https://static.ads-twitter.com/*",
+            "https://streamhg.com/*"
+          ]
+        },
+        "playUrlMatch": [
+          "https://*.cdn-centaurus.com/*/master.m3u8*",
+          "https://*.cloudatacdn.com/*",
+          "https://*.cloudflarestorage.com/*",
+          "https://*.linkofnyz.com/*.m3u8*",
+          "https://*.tapecontent.net/*",
+          "https://*.turboviplay.*/*.m3u8",
+          "https://*.voe-network.net/*/master.m3u8*",
+          "https://dood.la/pass_md5/*",
+          "https://streamtape.com/get_video*"
+        ],
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://supjav.com/zh/popular"
+          },
+          "categoryContent": {
+            "loadUrl": "https://supjav.com/zh/${tid}/page/${pg:-1}?sort=${sort:-quantity}"
+          },
+          "detailContent": {
+            "loadUrl": "https://supjav.com/zh/${id}"
+          },
+          "playerContent": {
+            "loadUrl": "https://supjav.com/zh/${pathname}#${link}"
+          },
+          "searchContent": {
+            "loadUrl": "https://supjav.com/zh/page/${pg:-1}?s=${key}"
+          }
+        }
+      }
+    },
+    {
+      "key": "XOJAV",
+      "name": "XOJAV",
+      "type": 3,
+      "quickSearch": 1,
+      "searchable": 1,
+      "changeable": 0,
+      "filterable": 1,
+      "timeout": 60,
+      "style": {
+        "type": "rect",
+        "ratio": 1.78
+      },
+      "api": "csp_GM",
+      "ext": {
+        "userScript": "./userScripts/xojav.user.js",
+        "debug": false,
+        "webViewSettings": {
+          "blockNetworkImage": true,
+          "blockList": [
+            "*.css*",
+            "*.ico*",
+            "*.png*",
+            "*.svg",
+            "https://*.googleapis.com/*",
+            "https://*.googletagmanager.com/*",
+            "https://*.magsrv.com/*",
+            "https://*.pemsrv.com/*"
+          ]
+        },
+        "spider": {
+          "homeContent": {
+            "loadUrl": "https://xojav.tv/?lang=zh"
+          },
+          "categoryContent": {
+            "loadUrl": "https://xojav.tv/${tid}${sort_by:-}&mode=async&function=get_block&from=${pg:-1}"
+          },
+          "detailContent": {
+            "loadUrl": "https://xojav.tv/videos/${id}"
+          },
+          "searchContent": {
+            "loadUrl": "https://xojav.tv/search/${key}/?mode=async&function=get_block&sort_by=most_relevant&from_videos=${pg:-1}"
+          }
+        }
+      }
+    }
+  ]
+}
