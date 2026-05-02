@@ -394,9 +394,9 @@
             "paichu": "1,2,3,4"
         },
         {
-            "name": "AV-小鸡资源",
-            "api": "https://api.xiaojizy.live/provide/vod",
-            "detail": "",
+            "name": "AV-javbus",
+            "api": "https://javbus.sbs/api.php/provide/vod/",
+            "detail": "https://javbus.sbs",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
@@ -424,7 +424,7 @@
         {
             "name": "AV-AIvin",
             "api": "http://lbapiby.com/api.php/provide/vod",
-            "detail": "",
+            "detail": "http://lbapiby.com",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
@@ -487,7 +487,7 @@
         {
             "name": "AV-番号资源",
             "api": "http://fhapi9.com/api.php/provide/vod",
-            "detail": "",
+            "detail": "http://fhapi9.com",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
@@ -585,7 +585,7 @@
         {
             "name": "AV-杏吧资源",
             "api": "https://xingba111.com/api.php/provide/vod",
-            "detail": "",
+            "detail": "https://xingba111.com",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
@@ -627,14 +627,14 @@
         {
             "name": "AV-黄色资源啊啊",
             "api": "https://hsckzy888.com/api.php/provide/vod",
-            "detail": "",
+            "detail": "https://hsckzy888.com",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
         {
             "name": "AV-小鸡资源",
             "api": "https://api.xiaojizy.live/provide/vod",
-            "detail": "",
+            "detail": "https://api.xiaojizy.live",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
@@ -648,21 +648,21 @@
         {
             "name": "AV-八天",
             "api": "https://8day.icu/api.php/provide/vod/",
-            "detail": "",
+            "detail": "https://8day.icu",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
         {
             "name": "AV-精东",
             "api": "http://chujia.cc/api.php/provide/vod/",
-            "detail": "",
+            "detail": "http://chujia.cc",
             "bz": "1",
             "paichu": "1,2,3,4"
         },
         {
             "name": "AV-细胞采集黄色",
             "api": "https://www.xxibaozyw.com/api.php/provide/vod",
-            "detail": "",
+            "detail": "https://www.xxibaozyw.com",
             "bz": "1",
             "paichu": "1,2,3,4"
         }
