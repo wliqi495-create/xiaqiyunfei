@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
+import colorsys
 import json
 import random
 import re
@@ -7,11 +8,12 @@ import sys
 import threading
 import time
 import requests
-from base64 import b64decode, b64encode
-from urllib.parse import urlparse
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from pyquery import PyQuery as pq
+from base64 import b64decode, b64encode
+from pprint import pprint
+from urllib.parse import urlparse, quote, unquote
 sys.path.append('..')
 from base.spider import Spider
 
@@ -19,10 +21,8 @@ from base.spider import Spider
 class Spider(Spider):
 
     def init(self, extend="{}"):
-        config=json.loads(extend)
-        self.domin=config['site']
-        self.proxies = config.get('proxy',{}) or {}
-        self.plp = config.get('plp', '')
+        self.domin='https://cg51.com'
+        self.proxies = {}
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
             'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="134", "Google Chrome";v="134"',
@@ -30,7 +30,9 @@ class Spider(Spider):
         }
         self.host=self.host_late(self.gethosts())
         self.headers.update({'Origin': self.host, 'Referer': f"{self.host}/"})
-        self.getcnh()
+        thread = threading.Thread(target=self.getcnh)
+        thread.start()
+
         pass
 
     def getName(self):
@@ -87,6 +89,7 @@ class Spider(Spider):
         url=ids[0] if ids[0].startswith("http") else f"{self.host}{ids[0]}"
         data=pq(requests.get(url, headers=self.headers,proxies=self.proxies).content)
         vod = {'vod_play_from': '51吸瓜'}
+        did = data('script[data-api]').attr('data-api')
         try:
             clist = []
             if data('.tags .keywords a'):
@@ -94,7 +97,7 @@ class Spider(Spider):
                     title = k.text()
                     href = k.attr('href')
                     clist.append('[a=cr:' + json.dumps({'id': href, 'name': title}) + '/]' + title + '[/a]')
-            vod['vod_content'] = '点击展开↓↓↓\n'+' '.join(clist)
+            vod['vod_content'] = ' '.join(clist)
         except:
             vod['vod_content'] = data('.post-title').text()
         try:
@@ -102,10 +105,10 @@ class Spider(Spider):
             if data('.dplayer'):
                 for c, k in enumerate(data('.dplayer').items(), start=1):
                     config = json.loads(k.attr('data-config'))
-                    plist.append(f"视频{c}${config['video']['url']}")
+                    plist.append(f"视频{c}${did}_dm_{config['video']['url']}")
             vod['vod_play_url']='#'.join(plist)
         except:
-            vod['vod_play_url']=f"请停止活塞运动，可能没有视频${url}"
+            vod['vod_play_url']=f"可能没有视频${url}"
         return {'list':[vod]}
 
     def searchContent(self, key, quick, pg="1"):
@@ -113,11 +116,45 @@ class Spider(Spider):
         return {'list':self.getlist(data('#archive article a')),'page':pg}
 
     def playerContent(self, flag, id, vipFlags):
-        p=0 if re.search(r'\.(m3u8|mp4|flv|ts|mkv|mov|avi|webm)', id) else 1
-        return  {'parse': p, 'url': f"{self.plp}{id}", 'header': self.headers}
+        did,pid=id.split('_dm_')
+        p=0 if re.search(r'\.(m3u8|mp4|flv|ts|mkv|mov|avi|webm)', pid) else 1
+        if not p:
+            pid=f"{self.getProxyUrl()}&pdid={quote(id)}&type=m3u8"
+        return  {'parse': p, 'url': pid, 'header': self.headers}
 
     def localProxy(self, param):
         try:
+            xtype=param.get('type','')
+            if 'm3u8' in xtype:
+                path,url=unquote(param['pdid']).split('_dm_')
+                data=requests.get(url, headers=self.headers,proxies=self.proxies,timeout=10).text
+                lines = data.strip().split('\n')
+                times=0.0
+                for i in lines:
+                    if i.startswith('#EXTINF:'):
+                        times+=float(i.split(':')[-1].replace(',',''))
+                thread = threading.Thread(target=self.some_background_task, args=(path,int(times)))
+                thread.start()
+                print('[INFO] 获取视频时长成功', times)
+                return [200, 'text/plain', data]
+            elif 'xdm' in xtype:
+                url=f"{self.host}{unquote(param['path'])}"
+                res = requests.get(url, headers=self.headers, proxies=self.proxies, timeout=10).json()
+                dms=[]
+                for k in res:
+                    text=k.get('text')
+                    children=k.get('children')
+                    if text:dms.append(text.strip())
+                    if children:
+                        for j in children:
+                            ctext=j.get('text')
+                            if ctext:
+                                ctext=ctext.strip()
+                                if "@" in ctext:
+                                    dms.append(ctext.split(' ',1)[-1].strip())
+                                else:
+                                    dms.append(ctext)
+                return self.xml(dms,int(param['times']))
             url=self.d64(param['url'])
             match = re.search(r"loadBannerDirect\('([^']*)'", url)
             if match:
@@ -125,8 +162,50 @@ class Spider(Spider):
             res = requests.get(url, headers=self.headers, proxies=self.proxies, timeout=10)
             return [200, res.headers.get('Content-Type'), self.aesimg(res.content)]
         except Exception as e:
-            self.log(f"图片代理错误: {str(e)}")
+            print(e)
             return [500, 'text/html', '']
+
+    def some_background_task(self,path,times):
+        try:
+            time.sleep(1)
+            purl=f"{self.getProxyUrl()}&path={quote(path)}&times={times}&type=xdm"
+            self.fetch(f"http://127.0.0.1:9978/action?do=refresh&type=danmaku&path={quote(purl)}")
+        except Exception as e:
+            print(e)
+
+    def xml(self, dms,times):
+        try:
+            tsrt=f'共有{len(dms)}条弹幕来袭！！！'
+            danmustr = f'<?xml version="1.0" encoding="UTF-8"?>\n<i>\n\t<chatserver>chat.xtdm.com</chatserver>\n\t<chatid>88888888</chatid>\n\t<mission>0</mission>\n\t<maxlimit>99999</maxlimit>\n\t<state>0</state>\n\t<real_name>0</real_name>\n\t<source>k-v</source>\n'
+            danmustr += f'\t<d p="0,5,25,16711680,0">{tsrt}</d>\n'
+            for i in range(len(dms)):
+                base_time = (i / len(dms)) * times
+                dm0 = base_time + random.uniform(-3, 3)
+                dm0 = round(max(0, min(dm0, times)), 1)
+                dm2 = self.get_color()
+                dm4 = re.sub(r'[<>&\u0000\b]', '', dms[i])
+                tempdata = f'\t<d p="{dm0},1,25,{dm2},0">{dm4}</d>\n'
+                danmustr += tempdata
+            danmustr += '</i>'
+            return [200, "text/xml", danmustr]
+        except Exception as e:
+            print(e)
+            return [500, 'text/html', '']
+
+    def get_color(self):
+        # 10% 概率随机颜色, 90% 概率白色
+        if random.random() < 0.1:
+            h = random.random()
+            s = random.uniform(0.7, 1.0)
+            v = random.uniform(0.8, 1.0)
+            r, g, b = colorsys.hsv_to_rgb(h, s, v)
+            r = int(r * 255)
+            g = int(g * 255)
+            b = int(b * 255)
+            decimal_color = (r << 16) + (g << 8) + b
+            return str(decimal_color)
+        else:
+            return '16777215'
 
     def e64(self, text):
         try:
@@ -134,7 +213,7 @@ class Spider(Spider):
             encoded_bytes = b64encode(text_bytes)
             return encoded_bytes.decode('utf-8')
         except Exception as e:
-            self.log(f"Base64编码错误: {str(e)}")
+            print(f"Base64编码错误: {str(e)}")
             return ""
 
     def d64(self, encoded_text):
@@ -143,7 +222,7 @@ class Spider(Spider):
             decoded_bytes = b64decode(encoded_bytes)
             return decoded_bytes.decode('utf-8')
         except Exception as e:
-            self.log(f"Base64解码错误: {str(e)}")
+            print(f"Base64解码错误: {str(e)}")
             return ""
 
     def gethosts(self):
@@ -169,14 +248,11 @@ class Spider(Spider):
             return ""
 
     def getcnh(self):
-        try:
-            data=pq(requests.get(f"{self.host}/homeway.html", headers=self.headers,proxies=self.proxies).content)
-            url=data('.post-content[itemprop="articleBody"] blockquote p').eq(0)('a').attr('href')
-            parsed_url = urlparse(url)
-            host = parsed_url.scheme + "://" + parsed_url.netloc
-            self.setCache('host_51cn',host)
-        except Exception as e:
-            self.log(f"获取: {str(e)}")
+        data=pq(requests.get(f"{self.host}/homeway.html", headers=self.headers,proxies=self.proxies).content)
+        url=data('.post-content[itemprop="articleBody"] blockquote p').eq(0)('a').attr('href')
+        parsed_url = urlparse(url)
+        host = parsed_url.scheme + "://" + parsed_url.netloc
+        self.setCache('host_51cn',host)
 
     def hstr(self, html):
         pattern = r"(backupLine\s*=\s*\[\])\s+(words\s*=)"
@@ -226,7 +302,7 @@ class Spider(Spider):
             result_json = ctx.evaluate(js_code)
             ctx.destroy()
             return json.loads(result_json)
-
+    
         except Exception as e:
             self.log(f"执行失败: {e}")
             return []
@@ -315,7 +391,7 @@ class Spider(Spider):
                 videos.append({
                     'vod_id': f"{a}{'@folder' if l else ''}",
                     'vod_name': b.replace('\n', ' '),
-                    'vod_pic': f"{self.getProxyUrl()}&url={self.e64(k('script').text())}",
+                    'vod_pic': f"{self.getProxyUrl()}&url={self.e64(k('script').text())}&type=img",
                     'vod_remarks': c,
                     'vod_tag':'folder' if l else '',
                     'style': {"type": "rect", "ratio": 1.33}
