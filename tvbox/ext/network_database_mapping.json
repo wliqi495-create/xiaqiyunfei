@@ -1,0 +1,98 @@
+{
+    "version": "4.0",
+    "databases": {
+        "song_9c8ec": {
+            "name": "🎵 KTV",
+            "valid": 1,
+            "hide": 1,
+            "size": 113975296,
+            "sha256": "9c8ec53492541b907f1a40b43acbb887b04565dc7d1d60617cfb6becf0a79b6f",
+            "path": "https://v6.gh-proxy.org/https://github.com/chitue/dongliTV/releases/download/databases-20260130/song_9c8ec.db",
+            "count_query": "SELECT COUNT(*) FROM song",
+            "category_count_query": "SELECT type_id, COUNT(*) FROM song GROUP BY type_id",
+            "categories_query": "SELECT id, name FROM song_type ORDER BY id",
+            "tables": {
+                "main": {
+                    "table_name": "song AS T1 JOIN song_type AS T2 ON T1.type_id = T2.id LEFT JOIN song_language AS T3 ON T1.language_id = T3.id",
+                    "category_filter_field": "T1.type_id",
+                    "search_fields": [
+                        "T1.name",
+                        "T1.singer_names"
+                    ],
+                    "field_mapping": {
+                        "vod_id": "T1.id",
+                        "vod_name": "T1.name",
+                        "vod_pic": "T1.url",
+                        "type_name": "T2.name",
+                        "vod_actor": "T1.singer_names",
+                        "vod_content": "T1.edition",
+                        "vod_play_url": "'http://ktvmedia.mysoto.cc/songs/' || T1.number || '.' || T1.format",
+                        "vod_remarks": "T1.singer_names || ' | ' || IFNULL(T3.name, '未知语言')"
+                    }
+                }
+            }
+        },
+        "movie_b8b5e": {
+            "name": "🎬 movie_b8b5e",
+            "valid": 1,
+            "hide": 0,
+            "size": 1347584,
+            "sha256": "b8b5ec0a290416464624ead7c5476fc0e0559898385777d8e1ef9d1fb5637d33",
+            "path": "https://v6.gh-proxy.org/https://github.com/chitue/dongliTV/releases/download/databases-20260130/movie_b8b5e.db",
+            "count_query": "SELECT COUNT(*) FROM vod_unified_data",
+            "category_count_query": "SELECT type_name, COUNT(*) FROM vod_unified_data GROUP BY type_name",
+            "categories_query": "SELECT DISTINCT type_name, type_name FROM vod_unified_data WHERE type_name IS NOT NULL AND type_name != '' ORDER BY type_name",
+            "tables": {
+                "main": {
+                    "table_name": "vod_unified_data",
+                    "category_filter_field": "type_name",
+                    "search_fields": [
+                        "vod_name"
+                    ],
+                    "field_mapping": {
+                        "vod_id": "vod_id",
+                        "vod_name": "vod_name",
+                        "vod_pic": "_IGNORE_FIELD_",
+                        "type_name": "type_name",
+                        "vod_play_url": "vod_play_url",
+                        "vod_actor": "_IGNORE_FIELD_",
+                        "vod_director": "_IGNORE_FIELD_",
+                        "vod_remarks": "_IGNORE_FIELD_",
+                        "vod_pubdate": "_IGNORE_FIELD_",
+                        "vod_area": "_IGNORE_FIELD_",
+                        "vod_year": "_IGNORE_FIELD_",
+                        "vod_content": "_IGNORE_FIELD_"
+                    }
+                }
+            }
+        },
+        "song_b4d4b": {
+            "name": "🎵 song_b4d4b",
+            "valid": 1,
+            "hide": 0,
+            "size": 663552,
+            "sha256": "b4d4b5dc86e74bf2ff96a56f199e19f1d90ebbfff49c864833c421efa13e1db4",
+            "path": "https://v6.gh-proxy.org/https://github.com/chitue/dongliTV/releases/download/databases-20260130/song_b4d4b.db",
+            "count_query": "SELECT COUNT(*) FROM songs",
+            "category_count_query": "SELECT genre, COUNT(*) FROM songs GROUP BY genre",
+            "categories_query": "SELECT DISTINCT genre, genre FROM songs WHERE genre IS NOT NULL AND genre != '' ORDER BY genre",
+            "tables": {
+                "main": {
+                    "table_name": "songs",
+                    "category_filter_field": "genre",
+                    "search_fields": [
+                        "song_name"
+                    ],
+                    "field_mapping": {
+                        "vod_id": "id",
+                        "vod_name": "song_name",
+                        "vod_pic": "_IGNORE_FIELD_",
+                        "type_name": "genre",
+                        "vod_play_url": "url",
+                        "vod_remarks": "created_at"
+                    }
+                }
+            }
+        }
+    }
+}
