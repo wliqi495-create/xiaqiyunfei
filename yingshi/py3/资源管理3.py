@@ -92,6 +92,15 @@ ONLINE_LIVE_SOURCES = [
         "type": "txt",
         "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     },
+     {
+        "id": "yiyifafa._live",
+        "name": "✨ 易发直播",
+        "url": "https://gh-proxy.org/raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+        "cover": TV_COVER,
+        "remarks": "易发直播源",
+        "type": "txt",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
     {
         "id": "Kimentanm",
         "name": "💎 Kimentanm",
