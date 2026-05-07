@@ -33,6 +33,18 @@
       "switchable": 1,
       "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/js2/a123tv.wv.js"
     },
+        {
+      "key": "央视直播.js",
+      "name": "💥央视直播💥",
+      "type": 3,
+      "api": "csp_WvSpider",
+      "jar": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/py2/WvSpider.jar",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "switchable": 1,
+      "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/js2/央视直播.js"
+    },
     {
       "key": "剧透",
       "name": "💥剧透社影视💥",
