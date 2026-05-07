@@ -1,23 +1,19 @@
 // 全球追更 - peekpili JS 源版（目录模式，仅列表 + goSearch）
-
-const TMDB_API_KEY = "dfa3affcaf45ae79b1294803129053eb";
-
+const TMDB_API_KEY = "";
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36";
 const DATA_SOURCES = {
-  tmdbImage: "https://image.tmdb.org/t/p/w500",
+  tmdbImage: "https://images.tmdb.org/t/p/w500",
   tmdbApis: [
-    "https://api.themoviedb.org/3",
-    "https://api.tmdb.org/3"
+    "https://api.tmdb.org/3",
+    "https://api.themoviedb.org/3"
   ]
 };
-
 // 简单 log（peekpili 一般有自己的 log，你也可以直接用 print/log）
 const log = {
   info: (msg) => { try { print("[INFO] " + msg); } catch (e) {} },
   warn: (msg) => { try { print("[WARN] " + msg); } catch (e) {} },
   error: (msg) => { try { print("[ERROR] " + msg); } catch (e) {} }
 };
-
 // ===================== HTTP 封装（用 req 代替 axios） =====================
 async function httpGet(url, params) {
   let query = "";
@@ -35,7 +31,6 @@ async function httpGet(url, params) {
   });
   return JSON.parse(r.content);
 }
-
 // TMDB 多域名回退
 async function fetchTmdb(endpoint, params) {
   let lastError;
@@ -53,7 +48,6 @@ async function fetchTmdb(endpoint, params) {
   }
   throw lastError || new Error("TMDB 全部域名访问失败");
 }
-
 // ===================== 简单日期处理 =====================
 function formatDate(dateStr) {
   if (!dateStr) return "";
@@ -66,23 +60,21 @@ function getToday() {
   const day = d.getDate().toString().padStart(2, "0");
   return y + "-" + m + "-" + day;
 }
-
 // ===================== 平台与筛选配置 =====================
 const PLATFORM_CONFIG = [
+  { id: "tencent",  name: "腾讯视频",      network: "2007" },
+  { id: "youku",    name: "优酷",          network: "1419" },
+  { id: "iqiyi",    name: "爱奇艺",        network: "1330" },
+  { id: "bilibili", name: "哔哩哔哩",      network: "1605" },
+  { id: "mgtv",     name: "芒果TV",        network: "1631" },
   { id: "netflix",  name: "Netflix",      network: "213"  },
   { id: "hbo",      name: "HBO Max",      network: "49"   },
   { id: "disney",   name: "Disney+",      network: "2739" },
   { id: "appletv",  name: "Apple TV+",    network: "2552" },
   { id: "amazon",   name: "Amazon Prime", network: "1024" },
   { id: "hulu",     name: "Hulu",         network: "453"  },
-  { id: "paramount",name: "Paramount+",   network: "4330" },
-  { id: "tencent",  name: "腾讯视频",      network: "2007" },
-  { id: "youku",    name: "优酷",          network: "1419" },
-  { id: "iqiyi",    name: "爱奇艺",        network: "1330" },
-  { id: "bilibili", name: "哔哩哔哩",      network: "1605" },
-  { id: "mgtv",     name: "芒果TV",        network: "1631" }
+  { id: "paramount",name: "Paramount+",   network: "4330" }
 ];
-
 const SUB_FILTERS = {
   "sort": {
     "key": "sort",
@@ -105,7 +97,6 @@ const SUB_FILTERS = {
     ]
   }
 };
-
 function generateClassAndFilters() {
   const classList = PLATFORM_CONFIG.map(p => ({ type_id: p.id, type_name: p.name }));
   const filters = {};
@@ -114,12 +105,10 @@ function generateClassAndFilters() {
   });
   return { class: classList, filters };
 }
-
 // ===================== 简单缓存（内存） =====================
 const cache = {};
 const CACHE_TTL = 10 * 60 * 1000;
 const MAX_CACHE_SIZE = 800;
-
 function getCachedData(key) {
   const data = cache[key];
   if (!data) return null;
@@ -136,10 +125,8 @@ function setCachedData(key, value) {
   }
   cache[key] = { value: value, time: Date.now() };
 }
-
 // ===================== JS 源标准接口 =====================
 async function init(cfg) {}
-
 // 首页：返回分类 + 筛选配置
 async function home(filter) {
   const { class: classList, filters } = generateClassAndFilters();
@@ -148,7 +135,6 @@ async function home(filter) {
     filters: filters
   });
 }
-
 // 分类列表：支持筛选（sort/type）
 async function category(tid, pg, filter, extend) {
   const page = parseInt(pg || "1");
@@ -162,24 +148,18 @@ async function category(tid, pg, filter, extend) {
       list: []
     });
   }
-
   let sort = "popularity.desc";
   let type = "tv";
-
   try {
-    // 优先用 extend（peekpili 常用）
     if (extend) {
       if (extend.sort) sort = extend.sort;
       if (extend.type) type = extend.type;
     } else if (filter) {
-      // 兼容某些环境用 filter 传
       if (filter.sort) sort = filter.sort;
-      if (filter.type) type = filter.type;
+      if (filter.type) type = extend.type;
     }
   } catch (e) {}
-
   const today = getToday();
-
   let endpoint = type === "movie" ? "/discover/movie" : "/discover/tv";
   let queryParams = {
     with_networks: platform.network,
@@ -187,7 +167,6 @@ async function category(tid, pg, filter, extend) {
     page: page,
     sort_by: (sort === "daily_airing" || sort === "next_episode") ? "popularity.desc" : sort
   };
-
   if (type === "anime") {
     queryParams.with_genres = "16";
   }
@@ -198,7 +177,6 @@ async function category(tid, pg, filter, extend) {
     queryParams["air_date.gte"] = today;
     queryParams["air_date.lte"] = today;
   }
-
   let items = [];
   try {
     const res = await fetchTmdb(endpoint, queryParams);
@@ -213,10 +191,8 @@ async function category(tid, pg, filter, extend) {
       list: []
     });
   }
-
   const processedItems = [];
   const BATCH_SIZE = 5;
-
   for (let i = 0; i < items.length; i += BATCH_SIZE) {
     const batch = items.slice(i, i + BATCH_SIZE);
     for (let j = 0; j < batch.length; j++) {
@@ -227,23 +203,19 @@ async function category(tid, pg, filter, extend) {
         processedItems.push(cached);
         continue;
       }
-
       let finalTitle = item.name || item.title || "";
       let remark = "⭐" + (item.vote_average ? item.vote_average.toFixed(1) : "0.0");
       let sortDate = item.first_air_date || item.release_date || "1900-01-01";
       const hasNoChinese = !/[\u4e00-\u9fa5]/.test(finalTitle);
-
       try {
         const detailEndpoint = "/" + (type === "movie" ? "movie" : "tv") + "/" + item.id;
         const detail = await fetchTmdb(detailEndpoint, {
           language: "zh-CN",
           append_to_response: "alternative_titles,external_ids"
         });
-
         const showEpisodeTag =
           type !== "movie" &&
           (sort === "next_episode" || sort === "daily_airing" || sort === "first_air_date.desc");
-
         if (showEpisodeTag) {
           const targetEp = (detail && (detail.next_episode_to_air || detail.last_episode_to_air)) || null;
           if (targetEp) {
@@ -259,7 +231,6 @@ async function category(tid, pg, filter, extend) {
             remark += " | " + releaseYear;
           }
         }
-
         if (hasNoChinese && detail && detail.alternative_titles) {
           const alt = detail.alternative_titles.titles || detail.alternative_titles.results || [];
           for (let k = 0; k < alt.length; k++) {
@@ -273,7 +244,6 @@ async function category(tid, pg, filter, extend) {
       } catch (e2) {
         log.warn("详情请求失败 [ID: " + item.id + "]: " + e2);
       }
-
       const vod = {
         vod_id: item.id.toString(),
         vod_name: finalTitle,
@@ -282,12 +252,10 @@ async function category(tid, pg, filter, extend) {
         goSearch: true,
         _date: sortDate
       };
-
       setCachedData(cacheKey, vod);
       processedItems.push(vod);
     }
   }
-
   return JSON.stringify({
     page: page,
     pagecount: 100,
@@ -296,8 +264,6 @@ async function category(tid, pg, filter, extend) {
     list: processedItems
   });
 }
-
-// 目录模式：detail/search/play 走简化实现
 async function detail(id) {
   return JSON.stringify({ list: [] });
 }
@@ -310,7 +276,6 @@ async function play(flag, id, flags) {
     url: id
   });
 }
-
 export default {
   init,
   home,
