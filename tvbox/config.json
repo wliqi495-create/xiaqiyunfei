@@ -33,21 +33,7 @@
       "switchable": 1,
       "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/js2/a123tv.wv.js"
     },
-        {
-      "key": "哔哩lz",
-      "name": "👮┃哔哩lz┃老张",
-      "type": 3,
-      "jar": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/jar1/laozhang.jar",
-      "api": "csp_ProxySpider",
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "changeable": 1,
-      "ext": {
-        "class": "Bilibili"
-      }
-    },
+       
     {
       "key": "油管jar2",
       "name": "👮┃油管jar[梯]┃老张",
