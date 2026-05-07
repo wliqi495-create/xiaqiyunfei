@@ -21,26 +21,17 @@
       "filterable": 0,
       "changeable": 0
     },
-    {
-      "key": "hohaiemby",
-      "name": "hohai|EMBY",
+       {
+      "key": "a123tvWV.JS",
+      "name": "💥a123tv@2💥",
       "type": 3,
-      "api": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/py3/emby.py",
+      "api": "csp_WvSpider",
+      "jar": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/py2/WvSpider.jar",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 1,
-      "ext": {
-        "server": "https://emby.hohai.eu.org:443",
-        "username": "chuxin666",
-        "password": "ycc123456",
-        "proxy": "",
-        "thread": 0,
-        "device_name": "My Computer",
-        "client": "Hills Windows",
-        "client_version": "0.2.2",
-        "device_id": "a9f74849-83d5-4a28-8b85-a087af1402e3"
-      }
+      "switchable": 1,
+      "ext": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/js2/a123tv.wv.js"
     },
     {
       "key": "剧透",
@@ -52,26 +43,7 @@
       "filterable": 0,
       "changeable": 0
     },
-    {
-      "key": "YYMP3音乐网",
-      "name": "💥YYMP3音乐网💥",
-      "type": 3,
-      "api": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/py3/YYMP3音乐网_3.py",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "changeable": 0
-    },
-     {
-      "key": "4K影视_2.py",
-      "name": "💥4K影视9💥",
-      "type": 3,
-      "api": "https://gh-proxy.org/https://raw.githubusercontent.com/wliqi495-create/jaychouqq/refs/heads/main/yingshi/py3/4K影视_2.py",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "changeable": 0
-    },
+    
     {
       "key": "葡萄5区",
       "name": "💥葡萄5区💥",
